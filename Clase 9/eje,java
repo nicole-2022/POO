@@ -1,0 +1,13 @@
+public int LeerEnteros(){
+        Scanner sc = new Scanner( System.in);
+        System.out.println("Digite el numero entero");
+        int n = sc.nextInt();
+        /*
+         Para números enteros nextInt() -> ejemplo: sc.nextInt()
+         * Para números reales nextDouble() -> ejemplo: sc.nextDouble()
+         * Para booleanos nextBoolean() -> ejemplo: sc.nextBoolean()
+         * Para cadenas (String) next() -> ejemplo: sc.next()
+        */
+        sc.close();
+        return n;
+    }
