@@ -1,29 +1,24 @@
 public class iPhone extends Celular {
-    private String marca;
-    private String modelo;
+    
 
-    private String camara;
-    private String almacenamiento;
-
-    public iPhone (String marca, String modelo, String camara, String almacenamiento){
-        super (marca);
-        this.modelo = modelo;
-        this.camara = camara;
-        this.almacenamiento = almacenamiento;
+    public iPhone (String marca, String modelo){
+        super (marca, modelo);
+        
+        
     }
     @Override
     public void camara (){
-        camara += 5;
+        camara += 15;
     }
 
-    @ Override 
+    @Override 
     public void almacenamiento(){
-        almacenamiento += 250;
+        almacenamiento += 215;
     }
 
     @Override
     public String info(){
-        return " iPhone" +  marca +"almacenamiento" + almacenamiento+ "camara" + camara  ;
+        return " iPhone" +  marca + " modelo" + modelo + " almacenamiento " + almacenamiento+ " gb" + " camara " + camara + "mp"  ;
  
     }
 }

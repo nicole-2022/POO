@@ -1,29 +1,23 @@
 public class Android extends Celular {
-    private String marca;
-    private String modelo;
-
-    private String camara;
-    private String almacenamiento;
-
-    public Android (String marca, String modelo, String camara, String almacenamiento){
-        super (marca);
-        this.modelo = modelo;
-        this.camara = camara;
-        this.almacenamiento = almacenamiento;
+    
+    public Android (String marca, String modelo ){
+        super (marca, modelo);
+        
+        
     }
     @Override
     public void camara (){
-        camara += 45; 
+        camara += 25; 
     }
 
-    @ Override 
+    @Override 
     public void almacenamiento(){
-        almacenamiento += 320;
+        almacenamiento += 125;
     }
 
     @Override
     public String info(){
-        return " Android" +  marca +"almacenamiento" + almacenamiento+ "camara" + camara + "MP";
+        return " Android " +  marca + " modelo " + modelo + " almacenamiento " + almacenamiento+ "GB" + " camara " + camara + " MP " ;
     }
  
 

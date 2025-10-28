@@ -15,3 +15,4 @@ public class Vehiculo {
     public String info() {
         return "Vehículo " + marca + " velocidad " + velocidad + " km/h";
     }
+}
