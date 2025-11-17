@@ -14,17 +14,20 @@ public class BotonPiso extends Boton {
     @Override
     public void presionar() {
         iluminado = true;
-        System.out.println("Botónes del piso " + piso + (direccionSubida ? " en direcion SUBIR " : "BAJAR") + " (Boton iluminado)");
+        System.out.println("Botón del piso " + piso + " en direcion SUBIR "+ direccionSubida  + "\nBoton  (iluminado)");
         
     }
     public void presionarBajar() {
         iluminado = true;
-        System.out.println("Botónes del piso " +  piso  +  (direccionBajada ? " en direción Bajar " :    "subir" ) + " (Boton iluminado)");
+        System.out.println("Botón del piso " +  piso  + " en direción Bajar " + direccionBajada + "\nBoton  (iluminado)");
         
     }
    
-   
+   @Override
+   public void cancelarIluminacion() {
+        iluminado = false;
+        System.out.println("Iluminación del botón del piso  (Apagada)");
+    } 
 
     
 }
-

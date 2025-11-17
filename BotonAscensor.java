@@ -15,5 +15,9 @@ public class BotonAscensor extends Boton {
         System.out.println("Botón del ascensor para el piso " + destino + " presionado iluminado");
         
     }
-    
+    @Override
+   public void cancelarIluminacion() {
+        iluminado = false;
+        System.out.println("Iluminación del botón del ascensor (Apagado)");
+    } 
 }

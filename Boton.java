@@ -1,8 +1,8 @@
-public  class Boton {
+public abstract class Boton {
     protected boolean iluminado;
 
     public Boton() {
-        this.iluminado = true;
+        this.iluminado = false;
     }
 
     public void presionar() {

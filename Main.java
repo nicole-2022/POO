@@ -7,9 +7,9 @@ public class Main {
         while (true) {
         System.out.println("Deseas Subir (1) o bajar(2) en el ascensor \nOpcion (1)\nOpcion (2)  ");
         int direccion = scanner.nextInt();
-        System.out.print(" piso en que se encuentra el usuario actualmente: ");
+        System.out.print("Piso en que se encuentra el usuario actualmente: ");
         int getPisoActual = scanner.nextInt();
-        System.out.println("\nEl usuario escoge una opcion de los");
+        System.out.println("\nEl usuario escoge una opcion: ");
        if (direccion == 1) {
             BotonPiso botonPiso = new BotonPiso(getPisoActual, true, false);
             botonPiso.presionar();
@@ -22,13 +22,14 @@ public class Main {
         puertaPiso.abrir();
         PuertaAscensor puertaAscensor = new PuertaAscensor(1);
         puertaAscensor.abrir();
+        BotonPiso cancelarIluminacion1 = new BotonPiso(getPisoActual, false, false);
+        cancelarIluminacion1.cancelarIluminacion();
         System.out.print("\n¿seleciona un piso a el que decides ir ?(1-20): ");
         int destino = scanner.nextInt();
         
         BotonAscensor boton = new BotonAscensor(destino);
         boton.presionar();
         
-
         puertaPiso.cerrar();
         puertaAscensor.cerrar();
         
@@ -36,7 +37,7 @@ public class Main {
         Controlador.moverAutomatico(controlador, destino);
         
         controlador.parar();
-        Boton boton3 = new Boton();
+        BotonAscensor boton3 = new BotonAscensor(destino);
         boton3.cancelarIluminacion();
        
         puertaAscensor.abrir();

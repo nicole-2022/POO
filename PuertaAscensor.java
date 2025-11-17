@@ -1,18 +1,19 @@
 public class PuertaAscensor extends Puerta {
-    private int Ascensor;
+    private int ascensor;
 
     public PuertaAscensor(int Ascensor) {
         super();
-        this.Ascensor = Ascensor;
+        this.ascensor = Ascensor;
     }
-
+    @Override
     public void abrir() {
         abierta = true;
          System.out.println("Abriendo puertas del ascensor " );
         
     }
 
-     public void cerrar() {
+    @Override
+    public void cerrar() {
         abierta = false;
         System.out.println("Cerrando puertas del Ascensor "); 
         
@@ -20,6 +21,6 @@ public class PuertaAscensor extends Puerta {
 
 
     public int getAscensor() {
-        return Ascensor;
+        return ascensor;
     }
 }
